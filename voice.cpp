@@ -39,22 +39,45 @@ main(){
             system(charCommand);
 
 
-
+            order:
             cout<<"=> ";
             string order;
             cin>>order;
 
-            if(order=="google" or order=="Google" or order=="GOOGLE" ){
+            if(order=="google" or order=="Google" or order=="GOOGLE"){
 
 
-                string phrase = "Opening "+ order;
+                string phrase = "Opening google";
+                string command = "espeak \"" + phrase + "\"";
+                const char *charCommand = command.c_str();
+                cout<<phrase;
+                system(charCommand);
+
+                system("start https:\\www.google.com");
+                
+
+            }
+            else if(order=="notepad" or order=="Notepad" or order=="NOTEPAD"){
+
+
+                string phrase = "Opening notepad";
+                string command = "espeak \"" + phrase + "\"";
+                const char *charCommand = command.c_str();
+                cout<<phrase;
+                system(charCommand);
+
+                system("start notepad");
+                
+
+            }
+            else{
+                cout<<"Sorry I didn't understand your command, please write valid command \n";
+                string phrase = "Sorry I didn't understand your command, please write valid command";
                 string command = "espeak \"" + phrase + "\"";
                 const char *charCommand = command.c_str();
                 system(charCommand);
 
-                system("start https:\\www.google.com");
-
-
+                goto order;
             }
         }
         else{

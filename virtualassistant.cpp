@@ -71,7 +71,7 @@ int main()
         STARTUPINFO startInfo = {0};
         PROCESS_INFORMATION processInfo = {0};
 
-        if(strcmp(password, "inertia")==0){
+        if(strcmp(password, "seed")==0){
             cout<<"\n<==================================================================================================>\n\n";
             wishme();
             do{
@@ -107,7 +107,7 @@ int main()
                 
                 else if(strcmp(ch, "who are you") == 0 || strcmp(ch, "tell me about yourself") == 0 || strcmp(ch, "about") == 0 ){
                     cout<<"I'm a virtual assistant created by my master CodeInertia !!!"<<endl;
-                    string phrase = "I am a virtual assistant created by my master CodeInertia";
+                    string phrase = "I am a virtual assistant created by my master Shubham";
                     string command = "espeak \"" + phrase + "\"";
                     const char *charCommand = command.c_str();
                     system(charCommand);
